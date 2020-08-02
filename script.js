@@ -40,7 +40,9 @@ function startTimer() {
 
 function tick() {
     state.tickingTime--;
-    state.timerDOM.textContent = secondsToTime(state.tickingTime);
+    let stringTime = secondsToTime(state.tickingTime);
+    state.timerDOM.textContent = stringTime;
+    setDocumentTitle(stringTime);
     if(state.tickingTime === 0) {
         clearInterval(state.timer);
         playAlarm();
@@ -61,6 +63,19 @@ function playAlarm() {
 }
 
 // utils
+
+function setDocumentTitle(stringTime) {
+    switch(state.timerAction) {
+        case timerAction.WORK:
+            window.document.title = stringTime + '😤';
+            break;
+        case timerAction.LONG_BREAK:   
+            window.document.title = stringTime + '😴';
+            break;
+        case timerAction.SHORT_BREAK:
+            window.document.title = stringTime + '🤠';
+    }
+}
 
 function addClass(ele, classToAdd, classToRemove = null) {
     if(classToRemove) {
@@ -147,6 +162,7 @@ function addEventListenersToDOM() {
              pauseTimer();
              state.tickingTime = timerActionToSeconds();
              state.timerDOM.textContent = timerActionToTimeString();
+             setDocumentTitle(timerActionToTimeString());
          });
     }
 
