@@ -35,6 +35,7 @@ function startTimer() {
     clearInterval(state.timer);
     state.timer = setInterval(tick, 1000);
     state.playPauseButtonDOM.textContent = 'Pause';
+    addClass(document.getElementById('playPauseButton'), 'btn-danger', 'btn-success');
 }
 
 function tick() {
@@ -50,6 +51,7 @@ function pauseTimer() {
     clearInterval(state.timer);
     state.ticking = false;
     state.playPauseButtonDOM.textContent = 'Play';
+    addClass(document.getElementById('playPauseButton'), 'btn-success', 'btn-danger');
 }
 
 function playAlarm() {
@@ -152,13 +154,10 @@ function addEventListenersToDOM() {
     // play / pause button
     document.getElementById('playPauseButton').addEventListener('click', () => {
         if(state.ticking) {
-            pauseTimer();
-            addClass(document.getElementById('playPauseButton'), 'btn-success', 'btn-danger');
-            
+            pauseTimer();        
         }
         else {
             startTimer();
-            addClass(document.getElementById('playPauseButton'), 'btn-danger', 'btn-success');
         }
     });
 
