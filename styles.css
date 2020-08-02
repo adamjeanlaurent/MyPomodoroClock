@@ -1,0 +1,36 @@
+.centerText {
+    text-align: center;
+}
+
+.centerElement {
+    display:table;
+    margin: 0 auto;
+}
+
+#textInput {
+    width: 40%;
+}
+
+.form-control {
+    width: 20%;
+}
+
+body{
+    margin-top: 8%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1c5c5;
+    font-size: 110%;
+}
+
+#timer {
+    font-size: 400%;
+}
+
+button {
+    color: black !important;
+    border: 200px !important; 
+} 
+
+#playPauseButton {
+    width: 20%; 
+}

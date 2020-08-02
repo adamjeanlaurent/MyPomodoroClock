@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Timer -->
+
+    <h1 id="timer" class="centerText">00:00</h1>
+
+    <input type="text" class="centerElement form-control" placeholder="What Are You Working On?">
+
+    <br>
+    <!-- Play / Pause Button  -->
+
+    <button id="playPauseButton" class="centerElement btn btn-success">Play</button>
+    <br>
+    <!-- Timer Modes -->
+
+    <div id="timerModeButtons" class="centerElement">
+        <!-- Work Time -->
+        <button class="modeButton workModeButton btn btn-warning">Work</button>
+        <!-- Short Break -->
+        <button class="modeButton shortBreakModeButton btn btn-outline-primary">Short Break</button>
+        <!-- Long Break -->
+        <button class="modeButton longBreakModeButton btn btn-outline-danger">Long Break</button>
+    </div>
+
+    <br>
+    <!-- Time Selectors -->
+
+    <!-- Work Time Selector -->
+    <section class="centerElement">
+        Work Time:
+        <select name="" id="workTime">
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+            <option value="40">40</option>
+            <option value="45">45</option>
+            <option value="50">50</option>
+            <option value="55">55</option>
+            <option value="60">60</option>
+        </select>
+    </section>
+    <br>
+    
+
+    <!-- Short Break Selector -->
+    <section class="centerElement">
+        Short Break Time:
+        <select name="" id="shortBreak">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </section>
+
+
+    <br>
+
+    <section class="centerElement">
+        Long Break Time:
+        <!-- Long Break Selector -->
+        <select name="" id="longBreak">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+        </select>
+    </section>
+    <br>
+    <!-- Set Number of Alarm Sound Buttons -->
+    <section class="centerElement">
+        Num Alarm Sound:
+        <button class="alarmSoundNum a1 btn btn-warning">1</button>
+        <button class="alarmSoundNum a2 btn btn-outline-primary">3</button>
+        <button class="alarmSoundNum a3 btn btn-outline-danger">5</button>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
