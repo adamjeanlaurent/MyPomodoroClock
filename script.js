@@ -31,6 +31,9 @@ let state = new AppState();
 
 // Timer 
 function startTimer() {
+    // stops negative countdown
+    if(state.tickingTime <= 0)
+        return;
     state.ticking = true;
     clearInterval(state.timer);
     state.timer = setInterval(tick, 1000);
